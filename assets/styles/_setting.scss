@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Unbounded";
+    src: url(../fonts/Unbounded-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Light.ttf);
+}
+$font1: "Unbounded", sans-serif;
+$font2: "Poppins", serif;
+$black1: rgb(17,17,17);
+$white1: rgb(243, 243, 243);
+$grey3: rgb(105,105,105);
+$rose: rgb(212,138,122);
+$or:rgb(250, 193, 94);
+
+@mixin title{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white1;
+    font-family: $font1;
+}
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body {
+    background: $grey3;
+    color: $white1;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 0.8rem;
+    font-family: $font2, serif;
+}
+
+

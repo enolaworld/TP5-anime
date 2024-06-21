@@ -1,0 +1,104 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        text-align: center;
+        width: 100%; // Occuper toute la largeur disponible
+    }
+
+    .header-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Centrer verticalement les éléments
+        align-items: center; // Centrer horizontalement les éléments
+        width: 50%;
+        opacity: 0;
+        transform: translate(40px);
+        animation: headerAnim 1.5s forwards;
+
+        @media screen and (max-width: 700px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes headerAnim {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: $font2;
+            color: $or;
+            margin-bottom: 10px; // Ajouter un espacement en bas
+
+            @media screen and (max-width: 700px) {
+                font-size: 3.2rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 3rem;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 2rem;
+            }
+        }
+
+        h3 {
+            color: $rose;
+            font-size: 1rem;
+            margin-bottom: 10px; // Ajouter un espacement en bas
+
+            @media screen and (max-width: 700px) {
+                display: block;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 0.9em;
+            }
+        }
+
+        p {
+            font-style: italic;
+            font-size: 1rem;
+
+            @media screen and (max-width: 700px) {
+                font-size: 0.8rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .header-right {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media screen and (max-width: 600px) {
+            width: 100%; // Pour occuper toute la largeur en mode colonne
+            margin-top: 20px; // Ajouter un espacement entre .header-left et .header-right en mode colonne
+        }
+
+        #slider {
+            width: 100%;
+
+            @media screen and (max-width: 700px) {
+                width: 90%;
+            }
+        }
+    }
+}
+
